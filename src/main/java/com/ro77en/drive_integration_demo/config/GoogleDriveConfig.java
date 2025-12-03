@@ -29,7 +29,7 @@ public class GoogleDriveConfig {
     private static final List<String> SCOPES = Collections.singletonList(DriveScopes.DRIVE);
 
     @Bean
-    public Drive googleDriveService() throws GeneralSecurityException, IOException {
+    public Drive googleDriveClient() throws GeneralSecurityException, IOException {
         log.info("Creating Google Drive Service...");
 
         GoogleCredentials credentials = GoogleCredentials.fromStream(new FileInputStream(CREDENTIALS_FILE_PATH))
